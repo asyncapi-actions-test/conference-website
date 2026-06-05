@@ -4,10 +4,12 @@ import Button from '../../components/Buttons/button';
 import Heading from '../../components/Typography/heading';
 import Paragraph from '../../components/Typography/paragraph';
 import { City } from '../../types/types';
+import { isCfpDeadlinePassed } from '../../utils/cfp-deadline';
 import { isExternalUrl, resolveCfpUrl } from '../../utils/pretalx';
 import { cities } from '../../config/conference-data';
 
 type CfpCity = City & {
+  cfpDeadlinePassed: boolean;
   cfpUrl: string;
 };
 
@@ -18,6 +20,7 @@ export default function CfpIndex() {
     if (cfpUrl) {
       acc.push({
         ...(city as City),
+        cfpDeadlinePassed: isCfpDeadlinePassed(city.cfpDate),
         cfpUrl,
       });
     }
@@ -72,18 +75,27 @@ export default function CfpIndex() {
                   CFP deadline: {city.cfpDate}
                 </Paragraph>
               </div>
-              <Link
-                className="mt-8"
-                href={city.cfpUrl}
-                target={isExternalUrl(city.cfpUrl) ? '_blank' : undefined}
-                rel={isExternalUrl(city.cfpUrl) ? 'noreferrer' : undefined}
-              >
+              {city.cfpDeadlinePassed ? (
                 <Button
                   type="button"
-                  className="w-full"
-                  text="Submit a Proposal"
+                  disabled
+                  className="w-full mt-8 opacity-60 text-sm"
+                  text="CFP deadline has passed"
                 />
-              </Link>
+              ) : (
+                <Link
+                  className="mt-8"
+                  href={city.cfpUrl}
+                  target={isExternalUrl(city.cfpUrl) ? '_blank' : undefined}
+                  rel={isExternalUrl(city.cfpUrl) ? 'noreferrer' : undefined}
+                >
+                  <Button
+                    type="button"
+                    className="w-full"
+                    text="Submit a Proposal"
+                  />
+                </Link>
+              )}
             </div>
           ))}
         </div>

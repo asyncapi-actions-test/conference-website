@@ -29,13 +29,26 @@ class LocationSettingsForm(forms.Form):
         required=False,
         help_text=_("This link is used on the conference website venue page."),
     )
+    image_url = forms.URLField(
+        label=_("Image URL"),
+        required=False,
+        help_text=_(
+            "This image is used as the conference city image on the website."
+        ),
+    )
 
     def __init__(self, *args, event, **kwargs):
         super().__init__(*args, **kwargs)
         self.event = event
         location = event.display_settings.get(LOCATION_SETTINGS_KEY, {})
 
-        for field_name in ["city", "country", "address", "map_url"]:
+        for field_name in [
+            "city",
+            "country",
+            "address",
+            "map_url",
+            "image_url",
+        ]:
             self.fields[field_name].initial = location.get(field_name, "")
 
     def save(self):
@@ -44,6 +57,7 @@ class LocationSettingsForm(forms.Form):
             "country": self.cleaned_data.get("country", "").strip(),
             "address": self.cleaned_data.get("address", "").strip(),
             "map_url": self.cleaned_data.get("map_url", "").strip(),
+            "image_url": self.cleaned_data.get("image_url", "").strip(),
         }
         self.event.display_settings[LOCATION_SETTINGS_KEY] = location
         self.event.landing_page_text = update_landing_page_location_block(
@@ -82,7 +96,9 @@ def get_landing_page_text_by_locale(current_text, locales=None, default_locale=N
         text_by_locale = {}
 
     configured_locales = [locale for locale in locales or [] if locale]
-    fallback_locale = default_locale or (configured_locales[0] if configured_locales else "en")
+    fallback_locale = default_locale or (
+        configured_locales[0] if configured_locales else "en"
+    )
 
     if not text_by_locale:
         text_by_locale[fallback_locale] = str(current_text or "")
@@ -108,6 +124,7 @@ def build_landing_page_location_block(location):
     country = location.get("country") or ""
     address = location.get("address") or ""
     map_url = location.get("map_url") or ""
+    image_url = location.get("image_url") or ""
 
     lines = [
         LOCATION_BLOCK_START,
@@ -124,6 +141,9 @@ def build_landing_page_location_block(location):
         lines.append(f"**Address:** {address}")
     elif map_url:
         lines.append(f"**Map:** {map_url}")
+
+    if image_url:
+        lines.append(f"**Image:** {image_url}")
 
     lines.append(LOCATION_BLOCK_END)
 

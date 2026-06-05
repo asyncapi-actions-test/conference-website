@@ -24,6 +24,7 @@ class EventInfoViewSet(viewsets.ViewSet):
                     "country": location.get("country") or "",
                     "address": location.get("address") or "",
                     "map_url": location.get("map_url") or "",
+                    "image_url": location.get("image_url") or "",
                 },
             }
         )

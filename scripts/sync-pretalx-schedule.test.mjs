@@ -89,6 +89,7 @@ test('maps Pretalx event metadata into website cities', async () => {
             country: 'India',
             address: 'NIMHANS Convention Centre, Bangalore',
             map_url: 'https://maps.example.com/bangalore',
+            image_url: 'https://pretalx.test/media/event-bangalore.webp',
           },
         },
       ],
@@ -102,7 +103,7 @@ test('maps Pretalx event metadata into website cities', async () => {
     cfpDate: '30 September, 2026',
     description:
       'Join us for AsyncAPI Online 2026. CFP and schedule data are managed in Pretalx.',
-    img: '/img/locations/teasers.webp',
+    img: 'https://pretalx.test/media/event-bangalore.webp',
     address: 'NIMHANS Convention Centre, Bangalore',
     mapUrl: 'https://maps.example.com/bangalore',
     sponsors: {
@@ -245,6 +246,7 @@ test('syncPretalxData writes generated Pretalx data under config/pretalx', async
           country: ' Edition',
           address: 'AsyncAPI YouTube Channel',
           map_url: 'https://www.youtube.com/@AsyncAPI',
+          image_url: 'https://pretalx.test/media/online.webp',
         },
       });
     }

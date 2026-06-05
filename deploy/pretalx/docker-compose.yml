@@ -15,12 +15,22 @@ services:
       PRETALX_FILESYSTEM_MEDIA: /public/media
       PRETALX_FILESYSTEM_STATIC: /public/static
       GUNICORN_FORWARDED_ALLOW_IPS: ${GUNICORN_FORWARDED_ALLOW_IPS:-127.0.0.1}
-    ports:
-      - '127.0.0.1:${PRETALX_HTTP_PORT:-8346}:80'
     volumes:
       - ./conf/pretalx.cfg:/etc/pretalx/pretalx.cfg:ro
       - pretalx-data:/data
       - pretalx-public:/public
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: pretalx-nginx
+    restart: unless-stopped
+    depends_on:
+      - pretalx
+    ports:
+      - '127.0.0.1:${PRETALX_HTTP_PORT:-8346}:80'
+    volumes:
+      - ./nginx-container.conf:/etc/nginx/conf.d/default.conf:ro
+      - pretalx-public:/public:ro
 
   db:
     image: docker.io/library/postgres:15-alpine

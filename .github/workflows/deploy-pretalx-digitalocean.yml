@@ -7,6 +7,10 @@ on:
         description: GitHub deployment environment name
         required: true
         default: pretalx-test
+      pretalx_site_url:
+        description: Public Pretalx base URL
+        required: false
+        default: https://pretalx.asyncapi.com
   push:
     branches:
       - master
@@ -31,13 +35,13 @@ jobs:
       - name: Set deployment URL
         id: deployment-url
         env:
-          PRETALX_SITE_URL: ${{ secrets.PRETALX_SITE_URL }}
+          PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://pretalx.asyncapi.com' }}
         run: |
           echo "url=$PRETALX_SITE_URL" >> "$GITHUB_OUTPUT"
 
       - name: Render Pretalx configuration
         env:
-          PRETALX_SITE_URL: ${{ secrets.PRETALX_SITE_URL }}
+          PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://pretalx.asyncapi.com' }}
           POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
           PRETALX_MAIL_FROM: ${{ secrets.PRETALX_MAIL_FROM }}
           PRETALX_MAIL_HOST: ${{ secrets.PRETALX_MAIL_HOST }}
@@ -47,6 +51,7 @@ jobs:
           PRETALX_MAIL_TLS: ${{ vars.PRETALX_MAIL_TLS || 'True' }}
           PRETALX_MAIL_SSL: ${{ vars.PRETALX_MAIL_SSL || 'False' }}
           PRETALX_ADMIN_EMAIL: ${{ secrets.PRETALX_ADMIN_EMAIL }}
+          PRETALX_FILE_UPLOAD_LIMIT: ${{ vars.PRETALX_FILE_UPLOAD_LIMIT || '2' }}
         run: |
           mkdir -p deploy/pretalx/conf
           python3 - <<'PY'
@@ -66,7 +71,7 @@ jobs:
           ]
           missing = [name for name in required if not os.environ.get(name)]
           if missing:
-              raise SystemExit(f"Missing required secrets: {', '.join(missing)}")
+              raise SystemExit(f"Missing required deployment values: {', '.join(missing)}")
 
           template = Template(Path('deploy/pretalx/pretalx.cfg.template').read_text())
           Path('deploy/pretalx/conf/pretalx.cfg').write_text(template.safe_substitute(os.environ))
@@ -88,7 +93,7 @@ jobs:
           PRETALX_REMOTE_PATH: ${{ vars.PRETALX_REMOTE_PATH || '/opt/asyncapi-pretalx' }}
         run: |
           ssh -p "$DO_SSH_PORT" -o StrictHostKeyChecking=accept-new "$DO_SSH_USER@$DO_SSH_HOST" "mkdir -p '$PRETALX_REMOTE_PATH/conf' '$PRETALX_REMOTE_PATH/plugins'"
-          rsync -az -e "ssh -p $DO_SSH_PORT" deploy/pretalx/Dockerfile deploy/pretalx/docker-compose.yml deploy/pretalx/conf deploy/pretalx/plugins "$DO_SSH_USER@$DO_SSH_HOST:$PRETALX_REMOTE_PATH/"
+          rsync -az -e "ssh -p $DO_SSH_PORT" deploy/pretalx/Dockerfile deploy/pretalx/docker-compose.yml deploy/pretalx/nginx-container.conf deploy/pretalx/conf deploy/pretalx/plugins "$DO_SSH_USER@$DO_SSH_HOST:$PRETALX_REMOTE_PATH/"
 
       - name: Write remote environment
         env:
@@ -99,12 +104,14 @@ jobs:
           POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
           PRETALX_HTTP_PORT: ${{ vars.PRETALX_HTTP_PORT || '8346' }}
           PRETALX_IMAGE_TAG: ${{ vars.PRETALX_IMAGE_TAG || 'latest' }}
+          PRETALX_FILE_UPLOAD_LIMIT: ${{ vars.PRETALX_FILE_UPLOAD_LIMIT || '2' }}
           GUNICORN_FORWARDED_ALLOW_IPS: ${{ vars.GUNICORN_FORWARDED_ALLOW_IPS || '127.0.0.1' }}
         run: |
           ssh -p "$DO_SSH_PORT" "$DO_SSH_USER@$DO_SSH_HOST" "cat > '$PRETALX_REMOTE_PATH/.env'" <<EOF
           POSTGRES_PASSWORD=$POSTGRES_PASSWORD
           PRETALX_HTTP_PORT=$PRETALX_HTTP_PORT
           PRETALX_IMAGE_TAG=$PRETALX_IMAGE_TAG
+          PRETALX_FILE_UPLOAD_LIMIT=$PRETALX_FILE_UPLOAD_LIMIT
           GUNICORN_FORWARDED_ALLOW_IPS=$GUNICORN_FORWARDED_ALLOW_IPS
           EOF
 
@@ -115,10 +122,10 @@ jobs:
           DO_SSH_PORT: ${{ vars.DO_SSH_PORT || '22' }}
           PRETALX_REMOTE_PATH: ${{ vars.PRETALX_REMOTE_PATH || '/opt/asyncapi-pretalx' }}
         run: |
-          ssh -p "$DO_SSH_PORT" "$DO_SSH_USER@$DO_SSH_HOST" "cd '$PRETALX_REMOTE_PATH' && docker compose --env-file .env pull db redis && docker compose --env-file .env build pretalx && docker compose --env-file .env up -d"
+          ssh -p "$DO_SSH_PORT" "$DO_SSH_USER@$DO_SSH_HOST" "cd '$PRETALX_REMOTE_PATH' && docker compose --env-file .env pull db redis nginx && docker compose --env-file .env build pretalx && docker compose --env-file .env up -d"
 
       - name: Health check
         env:
-          PRETALX_SITE_URL: ${{ secrets.PRETALX_SITE_URL }}
+          PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://pretalx.asyncapi.com' }}
         run: |
           curl --fail --retry 8 --retry-delay 10 "$PRETALX_SITE_URL/orga/"

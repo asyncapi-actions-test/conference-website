@@ -45,7 +45,11 @@ export function mapPretalxEventsToCities(events, options = {}) {
           ? formatEventDateRange(cfp.deadline, cfp.deadline)
           : 'Not announced yet',
         description: `Join us for ${eventName}. CFP and schedule data are managed in Pretalx.`,
-        img: event.header_image || event.logo || DEFAULT_LOCATION_IMAGE,
+        img:
+          location.image_url ||
+          event.header_image ||
+          event.logo ||
+          DEFAULT_LOCATION_IMAGE,
         address: location.address || 'Pretalx event page',
         mapUrl: location.map_url || eventUrl || undefined,
         sponsors: {

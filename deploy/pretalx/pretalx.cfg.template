@@ -4,6 +4,9 @@ logs = /data/logs
 media = /public/media
 static = /public/static
 
+[files]
+upload_limit = ${PRETALX_FILE_UPLOAD_LIMIT}
+
 [site]
 debug = False
 url = ${PRETALX_SITE_URL}

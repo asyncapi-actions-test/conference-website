@@ -16,6 +16,7 @@ import tickets from '../../config/tickets.json';
 import Agenda from '../../components/Agenda/agenda';
 import Guidelines from '../../components/Guidelines/guidelines';
 import { GetStaticPropsContext } from 'next';
+import { isCfpDeadlinePassed } from '../../utils/cfp-deadline';
 import { isExternalUrl, resolveCfpUrl } from '../../utils/pretalx';
 import { agenda, cities, speakers } from '../../config/conference-data';
 
@@ -57,6 +58,7 @@ export async function getStaticPaths() {
 function Venue({ city }: IVenue) {
   const eventStatus = getEventStatus(city.date);
   const cfpUrl = resolveCfpUrl(city.cfp);
+  const cfpDeadlinePassed = isCfpDeadlinePassed(city.cfpDate);
   const textColor: string =
     eventStatus === ConferenceStatus.ENDED ? 'text-gray-400' : 'text-white';
   return (
@@ -125,19 +127,27 @@ function Venue({ city }: IVenue) {
                     />
                   </a>
                 )}
-                {cfpUrl && (
-                  <a
-                    href={cfpUrl}
-                    target={isExternalUrl(cfpUrl) ? '_blank' : undefined}
-                    rel={isExternalUrl(cfpUrl) ? 'noreferrer' : undefined}
-                  >
+                {cfpUrl &&
+                  (cfpDeadlinePassed ? (
                     <Button
-                      type="submit"
-                      className="px-8 m-2 w-[250px]"
-                      text="Apply to be a speaker"
+                      type="button"
+                      disabled
+                      className="px-8 m-2 w-[250px] opacity-60 text-sm"
+                      text="CFP deadline has passed"
                     />
-                  </a>
-                )}
+                  ) : (
+                    <a
+                      href={cfpUrl}
+                      target={isExternalUrl(cfpUrl) ? '_blank' : undefined}
+                      rel={isExternalUrl(cfpUrl) ? 'noreferrer' : undefined}
+                    >
+                      <Button
+                        type="submit"
+                        className="px-8 m-2 w-[250px]"
+                        text="Apply to be a speaker"
+                      />
+                    </a>
+                  ))}
               </div>
             )}
           </div>
@@ -147,20 +157,21 @@ function Venue({ city }: IVenue) {
         id="agenda"
         className="border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center "
       >
-        {cfpUrl ? (
+        {city.agenda.length > 0 ? (
+          <div className="w-[1130px] lg:w-full">
+            <Agenda city={city} />
+          </div>
+        ) : cfpUrl ? (
           <div className="w-[1090px] lg:w-full">
             <Guidelines
               talkDeadLine={city.cfpDate}
               virtual={city.name == 'Online'}
               name={city.name}
               cfp={cfpUrl}
+              cfpDeadlinePassed={cfpDeadlinePassed}
             />
           </div>
-        ) : (
-          <div className="w-[1130px] lg:w-full">
-            <Agenda city={city} />
-          </div>
-        )}
+        ) : null}
       </div>
       <div id="recordings" className="flex justify-center">
         {eventStatus === ConferenceStatus.ENDED ? (
