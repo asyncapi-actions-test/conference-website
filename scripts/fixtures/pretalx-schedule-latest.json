@@ -1,0 +1,85 @@
+{
+  "id": 1,
+  "version": "1.0",
+  "published": "2026-10-01T09:00:00Z",
+  "slots": [
+    {
+      "id": 101,
+      "start": "2026-10-28T10:00:00Z",
+      "end": "2026-10-28T10:30:00Z",
+      "room": {
+        "id": 1,
+        "name": {
+          "en": "Main Stage"
+        }
+      },
+      "submission": {
+        "code": "EVT101",
+        "title": "Designing Event-Driven APIs",
+        "submission_type": {
+          "id": 1,
+          "name": {
+            "en": "Talk"
+          }
+        },
+        "track": {
+          "id": 1,
+          "name": {
+            "en": "API Design"
+          }
+        },
+        "state": "confirmed",
+        "speakers": [
+          {
+            "code": "ALICE",
+            "name": "Alice Example",
+            "biography": "Principal engineer",
+            "avatar_url": "https://pretalx.test/media/avatars/alice.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": 102,
+      "start": "2026-10-28T11:00:00Z",
+      "end": "2026-10-28T11:45:00Z",
+      "room": {
+        "id": 1,
+        "name": {
+          "en": "Main Stage"
+        }
+      },
+      "submission": {
+        "code": "EVT102",
+        "title": "Operating AsyncAPI at Scale",
+        "submission_type": {
+          "id": 2,
+          "name": {
+            "en": "Workshop"
+          }
+        },
+        "track": {
+          "id": 2,
+          "name": {
+            "en": "Operations"
+          }
+        },
+        "state": "confirmed",
+        "speakers": [
+          {
+            "code": "BOB",
+            "name": "Bob Example",
+            "biography": "Developer advocate",
+            "avatar_url": null
+          },
+          {
+            "code": "CASEY",
+            "name": "Casey Example",
+            "biography": "",
+            "avatar_url": "https://pretalx.test/media/avatars/casey.jpg"
+          }
+        ]
+      }
+    }
+  ]
+}

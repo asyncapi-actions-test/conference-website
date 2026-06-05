@@ -1,0 +1,55 @@
+{
+  "count": 3,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "name": {
+        "en": "AsyncAPI Online 2026"
+      },
+      "slug": "asyncapi-online-2026",
+      "is_public": true,
+      "date_from": "2026-10-28T10:00:00Z",
+      "date_to": null,
+      "timezone": "UTC",
+      "urls": {
+        "base": "https://pretalx.test/asyncapi-online-2026/",
+        "schedule": "https://pretalx.test/asyncapi-online-2026/schedule/",
+        "login": "https://pretalx.test/asyncapi-online-2026/login/",
+        "feed": "https://pretalx.test/asyncapi-online-2026/schedule/feed.xml"
+      }
+    },
+    {
+      "name": {
+        "en": "Internal Draft Event"
+      },
+      "slug": "internal-draft-event",
+      "is_public": false,
+      "date_from": "2026-08-01T10:00:00Z",
+      "date_to": null,
+      "timezone": "UTC",
+      "urls": {
+        "base": "https://pretalx.test/internal-draft-event/",
+        "schedule": "https://pretalx.test/internal-draft-event/schedule/",
+        "login": "https://pretalx.test/internal-draft-event/login/",
+        "feed": "https://pretalx.test/internal-draft-event/schedule/feed.xml"
+      }
+    },
+    {
+      "name": {
+        "en": "Unmatched Public Event"
+      },
+      "slug": "unmatched-public-event",
+      "is_public": true,
+      "date_from": "2026-11-01T10:00:00Z",
+      "date_to": null,
+      "timezone": "UTC",
+      "urls": {
+        "base": "https://pretalx.test/unmatched-public-event/",
+        "schedule": "https://pretalx.test/unmatched-public-event/schedule/",
+        "login": "https://pretalx.test/unmatched-public-event/login/",
+        "feed": "https://pretalx.test/unmatched-public-event/schedule/feed.xml"
+      }
+    }
+  ]
+}

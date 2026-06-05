@@ -12,14 +12,12 @@ import {
   Speaker as SpeakerType,
 } from '../../types/types';
 import { getEventStatus } from '../../utils/status';
-import agenda from '../../config/agenda.json';
-import speakers from '../../config/speakers.json';
-import cities from '../../config/city-lists.json';
 import tickets from '../../config/tickets.json';
 import Agenda from '../../components/Agenda/agenda';
 import Guidelines from '../../components/Guidelines/guidelines';
-import CFPdata from '../../config/cfp-data.json';
 import { GetStaticPropsContext } from 'next';
+import { isExternalUrl, resolveCfpUrl } from '../../utils/pretalx';
+import { agenda, cities, speakers } from '../../config/conference-data';
 
 interface IVenue {
   city: ExtendedCity;
@@ -38,7 +36,7 @@ export async function getStaticProps({ params }: GetStaticPropsContext) {
   const cityTicket = tickets.filter((ticket) => ticket.type.includes(cityName));
   currentCity.speakers = citySpeakers;
   currentCity.agenda = cityAgenda;
-  currentCity.ticket = cityTicket[0];
+  currentCity.ticket = cityTicket[0] ?? null;
   return {
     props: {
       city: currentCity,
@@ -58,6 +56,7 @@ export async function getStaticPaths() {
 
 function Venue({ city }: IVenue) {
   const eventStatus = getEventStatus(city.date);
+  const cfpUrl = resolveCfpUrl(city.cfp);
   const textColor: string =
     eventStatus === ConferenceStatus.ENDED ? 'text-gray-400' : 'text-white';
   return (
@@ -126,15 +125,11 @@ function Venue({ city }: IVenue) {
                     />
                   </a>
                 )}
-                {city.cfp && (
+                {cfpUrl && (
                   <a
-                    href={
-                      city.name === 'online'
-                        ? '/venue/online/register'
-                        : city.cfp
-                    }
-                    target={city.name == 'Online' ? '' : '_blank'}
-                    rel="noreferrer"
+                    href={cfpUrl}
+                    target={isExternalUrl(cfpUrl) ? '_blank' : undefined}
+                    rel={isExternalUrl(cfpUrl) ? 'noreferrer' : undefined}
                   >
                     <Button
                       type="submit"
@@ -152,16 +147,13 @@ function Venue({ city }: IVenue) {
         id="agenda"
         className="border border-x-0 border-b-0 border-t-[#333] py-28 container flex flex-col justify-center items-center "
       >
-
-        {city.cfp ? (
+        {cfpUrl ? (
           <div className="w-[1090px] lg:w-full">
             <Guidelines
-              talkDeadLine={
-                (city.name == 'Online' && CFPdata.CallEndDate) || city.cfpDate
-              }
+              talkDeadLine={city.cfpDate}
               virtual={city.name == 'Online'}
               name={city.name}
-              cfp={city.cfp}
+              cfp={cfpUrl}
             />
           </div>
         ) : (

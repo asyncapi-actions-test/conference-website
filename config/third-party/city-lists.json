@@ -83,7 +83,10 @@
       ]
     },
     "freeEntry": true,
-    "cfp": null,
+    "cfp": {
+      "provider": "pretalx",
+      "eventSlug": "asyncapi-online-2026"
+    },
     "recordings": null,
     "playlist": null
   },
