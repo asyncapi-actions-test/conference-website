@@ -4,8 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        PRETALX_IMAGE_TAG: ${PRETALX_IMAGE_TAG:-latest}
-    image: asyncapi-pretalx:${PRETALX_IMAGE_TAG:-latest}
+        PRETALX_IMAGE_TAG: ${PRETALX_IMAGE_TAG:-v2026.1.2}
+    image: asyncapi-pretalx:${PRETALX_IMAGE_TAG:-v2026.1.2}
     container_name: pretalx
     restart: unless-stopped
     depends_on:

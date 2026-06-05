@@ -1,85 +1,53 @@
 {
-  "id": 1,
-  "version": "1.0",
-  "published": "2026-10-01T09:00:00Z",
+  "id": 9,
+  "version": "0.1",
+  "published": "2026-06-05T13:46:52.667931Z",
+  "comment": {
+    "en": "We released our first schedule!"
+  },
   "slots": [
     {
-      "id": 101,
-      "start": "2026-10-28T10:00:00Z",
-      "end": "2026-10-28T10:30:00Z",
-      "room": {
-        "id": 1,
-        "name": {
-          "en": "Main Stage"
-        }
-      },
+      "id": 327,
+      "room": 9,
+      "start": "2026-06-18T09:30:00Z",
+      "end": "2026-06-18T10:00:00Z",
       "submission": {
-        "code": "EVT101",
-        "title": "Designing Event-Driven APIs",
+        "code": "FN7M8A",
+        "title": "Test Proposal",
+        "speakers": [
+          {
+            "code": "EMTVZL",
+            "name": "Thulie Sibasanda",
+            "biography": "Hello this is a test bio.",
+            "submissions": [],
+            "avatar_url": "http://localhost:8346/media/avatars/GUKSGV_ASOxI1D.webp",
+            "answers": []
+          }
+        ],
         "submission_type": {
-          "id": 1,
+          "id": 9,
           "name": {
             "en": "Talk"
-          }
-        },
-        "track": {
-          "id": 1,
-          "name": {
-            "en": "API Design"
-          }
-        },
-        "state": "confirmed",
-        "speakers": [
-          {
-            "code": "ALICE",
-            "name": "Alice Example",
-            "biography": "Principal engineer",
-            "avatar_url": "https://pretalx.test/media/avatars/alice.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "id": 102,
-      "start": "2026-10-28T11:00:00Z",
-      "end": "2026-10-28T11:45:00Z",
-      "room": {
-        "id": 1,
-        "name": {
-          "en": "Main Stage"
-        }
-      },
-      "submission": {
-        "code": "EVT102",
-        "title": "Operating AsyncAPI at Scale",
-        "submission_type": {
-          "id": 2,
-          "name": {
-            "en": "Workshop"
-          }
-        },
-        "track": {
-          "id": 2,
-          "name": {
-            "en": "Operations"
-          }
-        },
-        "state": "confirmed",
-        "speakers": [
-          {
-            "code": "BOB",
-            "name": "Bob Example",
-            "biography": "Developer advocate",
-            "avatar_url": null
           },
-          {
-            "code": "CASEY",
-            "name": "Casey Example",
-            "biography": "",
-            "avatar_url": "https://pretalx.test/media/avatars/casey.jpg"
-          }
-        ]
-      }
+          "default_duration": 30,
+          "deadline": null,
+          "requires_access_code": false
+        },
+        "track": null,
+        "tags": [],
+        "state": "confirmed",
+        "abstract": "Test abstract",
+        "description": "",
+        "duration": 30,
+        "slot_count": 1,
+        "content_locale": "en",
+        "do_not_record": false,
+        "image": "http://localhost:8346/media/asyncapi-us-conf-2026/submissions/FN7M8A/image_MfasF2T.webp",
+        "resources": [],
+        "answers": []
+      },
+      "description": null,
+      "duration": 30
     }
   ]
 }

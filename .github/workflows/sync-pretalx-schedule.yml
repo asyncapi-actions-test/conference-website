@@ -43,7 +43,7 @@ jobs:
           commit-message: "chore: sync pretalx schedule"
           title: Sync Pretalx schedule
           body: |
-            Syncs public Pretalx events, released schedule slots, and speaker data into generated website JSON config.
+            Syncs public Pretalx events, location metadata, city images, released schedule slots, and speaker data into generated website JSON config.
             Private submissions and review data are not fetched by this workflow.
           add-paths: |
             config/pretalx/agenda.json

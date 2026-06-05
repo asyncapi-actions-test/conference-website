@@ -18,54 +18,78 @@ test('maps public Pretalx events into generated website cities', async () => {
     await readFile(new URL('./fixtures/pretalx-events.json', import.meta.url))
   );
 
-  const cities = mapPretalxEventsToCities(events.results, {
+  const cities = mapPretalxEventsToCities(events, {
     baseUrl: 'https://pretalx.test',
   });
 
-  assert.deepEqual(cities, [
-    {
-      name: 'Online',
-      country: ' Edition',
-      date: '28 October, 2026',
-      cfpDate: 'Not announced yet',
-      description:
-        'Join us for AsyncAPI Online 2026. CFP and schedule data are managed in Pretalx.',
-      img: '/img/locations/teasers.webp',
-      address: 'Pretalx event page',
-      mapUrl: 'https://pretalx.test/asyncapi-online-2026/',
-      sponsors: {
-        eventSponsors: [],
+  assert.deepEqual(
+    cities.map((city) => ({
+      name: city.name,
+      country: city.country,
+      date: city.date,
+      mapUrl: city.mapUrl,
+      eventSlug: city.cfp.eventSlug,
+    })),
+    [
+      {
+        name: 'Europe',
+        country: 'TBA',
+        date: '5 - 6 November, 2026',
+        mapUrl: 'https://pretalx.test/asyncapi-europe-2026/',
+        eventSlug: 'asyncapi-europe-2026',
       },
-      freeEntry: true,
-      cfp: {
-        provider: 'pretalx',
+      {
+        name: 'Online',
+        country: ' Edition',
+        date: '28 October, 2026',
+        mapUrl: 'https://pretalx.test/asyncapi-online-2026/',
         eventSlug: 'asyncapi-online-2026',
       },
-      recordings: null,
-      playlist: null,
-    },
-    {
-      name: 'Unmatched Public Event',
-      country: 'TBA',
-      date: '1 November, 2026',
-      cfpDate: 'Not announced yet',
-      description:
-        'Join us for Unmatched Public Event. CFP and schedule data are managed in Pretalx.',
-      img: '/img/locations/teasers.webp',
-      address: 'Pretalx event page',
-      mapUrl: 'https://pretalx.test/unmatched-public-event/',
-      sponsors: {
-        eventSponsors: [],
+      {
+        name: 'India',
+        country: 'TBA',
+        date: '22 - 23 August, 2026',
+        mapUrl: 'https://pretalx.test/asyncapi-india-2026/',
+        eventSlug: 'asyncapi-india-2026',
       },
-      freeEntry: true,
-      cfp: {
-        provider: 'pretalx',
-        eventSlug: 'unmatched-public-event',
+      {
+        name: 'US',
+        country: 'TBA',
+        date: '17 - 20 June, 2026',
+        mapUrl: 'https://pretalx.test/asyncapi-us-conf-2026/',
+        eventSlug: 'asyncapi-us-conf-2026',
       },
-      recordings: null,
-      playlist: null,
+      {
+        name: 'Democonf',
+        country: 'TBA',
+        date: '2 - 4 June, 2026',
+        mapUrl: 'https://pretalx.test/democonf/',
+        eventSlug: 'democonf',
+      },
+    ]
+  );
+
+  assert.deepEqual(cities[0], {
+    name: 'Europe',
+    country: 'TBA',
+    date: '5 - 6 November, 2026',
+    cfpDate: 'Not announced yet',
+    description:
+      'Join us for AsyncAPI Conf Europe 2026. CFP and schedule data are managed in Pretalx.',
+    img: '/img/locations/teasers.webp',
+    address: 'Pretalx event page',
+    mapUrl: 'https://pretalx.test/asyncapi-europe-2026/',
+    sponsors: {
+      eventSponsors: [],
     },
-  ]);
+    freeEntry: true,
+    cfp: {
+      provider: 'pretalx',
+      eventSlug: 'asyncapi-europe-2026',
+    },
+    recordings: null,
+    playlist: null,
+  });
 });
 
 test('maps Pretalx event metadata into website cities', async () => {
@@ -73,50 +97,53 @@ test('maps Pretalx event metadata into website cities', async () => {
     await readFile(new URL('./fixtures/pretalx-events.json', import.meta.url))
   );
 
-  const cities = mapPretalxEventsToCities(events.results, {
+  const cities = mapPretalxEventsToCities(events, {
     baseUrl: 'https://pretalx.test',
     metadataBySlug: new Map([
       [
-        'asyncapi-online-2026',
+        'asyncapi-us-conf-2026',
         {
           cfp: {
             opening: '2026-06-01T00:00:00+00:00',
-            deadline: '2026-09-30T23:59:00+00:00',
-            is_open: true,
+            deadline: '2026-06-10T23:59:00+00:00',
+            is_open: false,
           },
           location: {
-            city: 'Bangalore',
-            country: 'India',
-            address: 'NIMHANS Convention Centre, Bangalore',
-            map_url: 'https://maps.example.com/bangalore',
-            image_url: 'https://pretalx.test/media/event-bangalore.webp',
+            city: 'New York',
+            country: 'United States',
+            address: 'Javits Center, New York',
+            map_url: 'https://maps.example.com/new-york',
+            image_url: 'https://pretalx.test/media/event-new-york.webp',
           },
         },
       ],
     ]),
   });
 
-  assert.deepEqual(cities[0], {
-    name: 'Bangalore',
-    country: 'India',
-    date: '28 October, 2026',
-    cfpDate: '30 September, 2026',
-    description:
-      'Join us for AsyncAPI Online 2026. CFP and schedule data are managed in Pretalx.',
-    img: 'https://pretalx.test/media/event-bangalore.webp',
-    address: 'NIMHANS Convention Centre, Bangalore',
-    mapUrl: 'https://maps.example.com/bangalore',
-    sponsors: {
-      eventSponsors: [],
-    },
-    freeEntry: true,
-    cfp: {
-      provider: 'pretalx',
-      eventSlug: 'asyncapi-online-2026',
-    },
-    recordings: null,
-    playlist: null,
-  });
+  assert.deepEqual(
+    cities.find((city) => city.cfp.eventSlug === 'asyncapi-us-conf-2026'),
+    {
+      name: 'New York',
+      country: 'United States',
+      date: '17 - 20 June, 2026',
+      cfpDate: '10 June, 2026',
+      description:
+        'Join us for AsyncAPI US Conf. CFP and schedule data are managed in Pretalx.',
+      img: 'https://pretalx.test/media/event-new-york.webp',
+      address: 'Javits Center, New York',
+      mapUrl: 'https://maps.example.com/new-york',
+      sponsors: {
+        eventSponsors: [],
+      },
+      freeEntry: true,
+      cfp: {
+        provider: 'pretalx',
+        eventSlug: 'asyncapi-us-conf-2026',
+      },
+      recordings: null,
+      playlist: null,
+    }
+  );
 });
 
 test('maps expanded Pretalx schedule slots into website speakers and agenda', async () => {
@@ -131,43 +158,21 @@ test('maps expanded Pretalx schedule slots into website speakers and agenda', as
   assert.deepEqual(result.speakers, [
     {
       id: 1,
-      name: 'Alice Example',
-      title: 'Principal engineer',
-      img: 'https://pretalx.test/media/avatars/alice.jpg',
-      city: ['Online'],
-    },
-    {
-      id: 2,
-      name: 'Bob Example',
-      title: 'Developer advocate',
-      img: '/img/speaker-images/paris/TBA.webp',
-      city: ['Online'],
-    },
-    {
-      id: 3,
-      name: 'Casey Example',
-      title: 'Speaker',
-      img: 'https://pretalx.test/media/avatars/casey.jpg',
+      name: 'Thulie Sibasanda',
+      title: 'Hello this is a test bio.',
+      img: 'http://localhost:8346/media/avatars/GUKSGV_ASOxI1D.webp',
       city: ['Online'],
     },
   ]);
 
   assert.deepEqual(result.agenda, [
     {
-      time: '10:00 - 10:30 UTC',
-      session: 'Designing Event-Driven APIs',
+      time: '09:30 - 10:00 UTC',
+      session: 'Test Proposal',
       speaker: 1,
       type: 'Talk',
       city: 'Online',
-      day: 'Wednesday, October 28, 2026',
-    },
-    {
-      time: '11:00 - 11:45 UTC',
-      session: 'Operating AsyncAPI at Scale',
-      speaker: [2, 3],
-      type: 'Workshop',
-      city: 'Online',
-      day: 'Wednesday, October 28, 2026',
+      day: 'Thursday, June 18, 2026',
     },
   ]);
 });
@@ -197,16 +202,14 @@ test('merges multiple Pretalx schedules without speaker id collisions', async ()
     mapPretalxSchedule(fixture, { city: 'Paris' }),
   ]);
 
-  assert.equal(result.speakers.length, 6);
+  assert.equal(result.speakers.length, 2);
   assert.deepEqual(
     result.speakers.map((speaker) => speaker.id),
-    [1, 2, 3, 4, 5, 6]
+    [1, 2]
   );
   assert.deepEqual(result.agenda[0].speaker, 1);
-  assert.deepEqual(result.agenda[1].speaker, [2, 3]);
-  assert.deepEqual(result.agenda[2].speaker, 4);
-  assert.deepEqual(result.agenda[3].speaker, [5, 6]);
-  assert.equal(result.agenda[2].city, 'Paris');
+  assert.deepEqual(result.agenda[1].speaker, 2);
+  assert.equal(result.agenda[1].city, 'Paris');
 });
 
 test('syncPretalxData writes generated Pretalx data under config/pretalx', async () => {
@@ -227,64 +230,49 @@ test('syncPretalxData writes generated Pretalx data under config/pretalx', async
 
     if (parsedUrl.pathname === '/api/events/') {
       assert.equal(parsedUrl.searchParams.get('is_public'), 'true');
-      return jsonResponse(events.results);
+      return jsonResponse(events);
     }
 
-    if (
-      parsedUrl.pathname ===
-      '/api/events/asyncapi-online-2026/p/asyncapi-cfp/event-info/'
-    ) {
+    if (parsedUrl.pathname.endsWith('/p/asyncapi-cfp/event-info/')) {
+      if (
+        parsedUrl.pathname !==
+        '/api/events/asyncapi-us-conf-2026/p/asyncapi-cfp/event-info/'
+      ) {
+        return notFoundResponse();
+      }
+
       return jsonResponse({
-        event: 'asyncapi-online-2026',
+        event: 'asyncapi-us-conf-2026',
         cfp: {
           opening: '2026-06-01T00:00:00+00:00',
-          deadline: '2026-09-30T23:59:00+00:00',
-          is_open: true,
+          deadline: '2026-06-10T23:59:00+00:00',
+          is_open: false,
         },
         location: {
-          city: 'Online',
-          country: ' Edition',
-          address: 'AsyncAPI YouTube Channel',
-          map_url: 'https://www.youtube.com/@AsyncAPI',
-          image_url: 'https://pretalx.test/media/online.webp',
+          city: 'New York',
+          country: 'United States',
+          address: 'Javits Center, New York',
+          map_url: 'https://maps.example.com/new-york',
+          image_url: 'https://pretalx.test/media/event-new-york.webp',
         },
       });
     }
 
-    if (
-      parsedUrl.pathname ===
-      '/api/events/asyncapi-online-2026/schedules/latest/'
-    ) {
+    if (parsedUrl.pathname.endsWith('/schedules/latest/')) {
       assert.deepEqual(parsedUrl.searchParams.getAll('expand'), [
         'slots.submission.speakers',
         'slots.submission.submission_type',
         'slots.submission.track',
       ]);
-      return jsonResponse(schedule);
-    }
 
-    if (
-      parsedUrl.pathname ===
-      '/api/events/unmatched-public-event/p/asyncapi-cfp/event-info/'
-    ) {
-      return {
-        ok: false,
-        status: 404,
-        statusText: 'Not Found',
-        json: async () => ({}),
-      };
-    }
+      if (
+        parsedUrl.pathname ===
+        '/api/events/asyncapi-us-conf-2026/schedules/latest/'
+      ) {
+        return jsonResponse(schedule);
+      }
 
-    if (
-      parsedUrl.pathname ===
-      '/api/events/unmatched-public-event/schedules/latest/'
-    ) {
-      return jsonResponse({
-        id: 2,
-        version: '1.0',
-        published: '2026-11-01T10:00:00Z',
-        slots: [],
-      });
+      return notFoundResponse();
     }
 
     throw new Error(`Unexpected URL ${url}`);
@@ -298,9 +286,14 @@ test('syncPretalxData writes generated Pretalx data under config/pretalx', async
       fetchImpl,
     });
 
-    assert.equal(result.cities.length, 2);
-    assert.equal(result.speakers.length, 3);
-    assert.equal(result.agenda.length, 2);
+    assert.equal(result.cities.length, 5);
+    assert.equal(result.speakers.length, 1);
+    assert.equal(result.agenda.length, 1);
+    assert.equal(result.cities[3].name, 'New York');
+    assert.equal(
+      result.cities[3].img,
+      'https://pretalx.test/media/event-new-york.webp'
+    );
 
     assert.deepEqual(
       await readJson(join(directory, 'config/pretalx/city-lists.json')),
@@ -325,5 +318,14 @@ function jsonResponse(body) {
     status: 200,
     statusText: 'OK',
     json: async () => body,
+  };
+}
+
+function notFoundResponse() {
+  return {
+    ok: false,
+    status: 404,
+    statusText: 'Not Found',
+    json: async () => ({}),
   };
 }

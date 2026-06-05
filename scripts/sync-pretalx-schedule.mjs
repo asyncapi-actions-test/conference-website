@@ -310,7 +310,8 @@ async function fetchPretalxEvents(
     );
   }
 
-  const events = await response.json();
+  const payload = await response.json();
+  const events = Array.isArray(payload) ? payload : payload.results || [];
 
   return events.filter((event) => event?.is_public === true);
 }
