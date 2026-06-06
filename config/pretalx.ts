@@ -1,5 +1,8 @@
-const baseUrl =
-  process.env.NEXT_PUBLIC_PRETALX_BASE_URL?.replace(/\/+$/, '') ?? '';
+const DEFAULT_PRETALX_BASE_URL = 'https://cfp.asyncapi.com';
+
+const baseUrl = (
+  process.env.NEXT_PUBLIC_PRETALX_BASE_URL || DEFAULT_PRETALX_BASE_URL
+).replace(/\/+$/, '');
 const defaultCfpPath =
   process.env.NEXT_PUBLIC_PRETALX_CFP_PATH?.replace(/^\/+|\/+$/g, '') ?? 'cfp';
 

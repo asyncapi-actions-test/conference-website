@@ -30,7 +30,7 @@ PRETALX_MAIL_PASSWORD=<mailjet-secret-key>
 ## Optional GitHub Variables
 
 - `DO_SSH_PORT`, defaults to `22`
-- `PRETALX_SITE_URL`, defaults to the workflow input or `https://pretalx.asyncapi.com`
+- `PRETALX_SITE_URL`, defaults to the workflow input or `https://cfp.asyncapi.com`
 - `PRETALX_REMOTE_PATH`, defaults to `/opt/asyncapi-pretalx`
 - `PRETALX_HTTP_PORT`, defaults to `8346`
 - `PRETALX_IMAGE_TAG`, defaults to `v2026.1.2`

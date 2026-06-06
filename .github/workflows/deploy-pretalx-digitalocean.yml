@@ -10,7 +10,7 @@ on:
       pretalx_site_url:
         description: Public Pretalx base URL
         required: false
-        default: https://pretalx.asyncapi.com
+        default: https://cfp.asyncapi.com
   push:
     branches:
       - master
@@ -35,13 +35,13 @@ jobs:
       - name: Set deployment URL
         id: deployment-url
         env:
-          PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://pretalx.asyncapi.com' }}
+          PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://cfp.asyncapi.com' }}
         run: |
           echo "url=$PRETALX_SITE_URL" >> "$GITHUB_OUTPUT"
 
       - name: Render Pretalx configuration
         env:
-          PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://pretalx.asyncapi.com' }}
+          PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://cfp.asyncapi.com' }}
           POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
           PRETALX_MAIL_FROM: ${{ secrets.PRETALX_MAIL_FROM }}
           PRETALX_MAIL_HOST: ${{ secrets.PRETALX_MAIL_HOST }}
@@ -126,6 +126,6 @@ jobs:
 
       - name: Health check
         env:
-          PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://pretalx.asyncapi.com' }}
+          PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://cfp.asyncapi.com' }}
         run: |
           curl --fail --retry 8 --retry-delay 10 "$PRETALX_SITE_URL/orga/"

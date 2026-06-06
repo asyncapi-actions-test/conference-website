@@ -12,7 +12,7 @@ export const links: LinkItem[] = (linksJson as LinkItem[]).map((link) => {
     subMenu: cities.map((city) => ({
       title:
         city.name === 'Online' ? city.name : `${city.name}, ${city.country}`,
-      ref: `/venue/${city.name}`,
+      ref: `/venue/${encodeURIComponent(city.name)}`,
     })),
   };
 });

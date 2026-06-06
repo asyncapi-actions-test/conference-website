@@ -30,7 +30,8 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const city = cities.find((c) => c.name === id);
+  const decodedId = decodeURIComponent(id);
+  const city = cities.find((c) => c.name === decodedId);
 
   return {
     title: city
