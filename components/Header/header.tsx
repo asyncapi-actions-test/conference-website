@@ -39,8 +39,8 @@ function Header(): JSX.Element {
                   AsyncAPI technology to locations worldwide!
                 </Paragraph>
               </div>
-              <div className="mt-[54px] relative flex items-center justify-center gap-4 sm:flex-col">
-                <Link href="#tickets">
+              <div className="mt-[54px] relative flex items-center justify-center gap-4 flex-wrap">
+                <Link href="/register/2026">
                   <Button
                     type="button"
                     className="w-[250px]"
