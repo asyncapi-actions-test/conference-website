@@ -77,6 +77,9 @@ export default async function VenuePage({
   const eventStatus = getEventStatus(city.date);
   const cfpUrl = resolveCfpUrl(city.cfp);
   const cfpDeadlinePassed = isCfpDeadlinePassed(city.cfpDate);
+  const shouldShowCfpGuidelines = Boolean(
+    city.agenda.length === 0 && cfpUrl && !cfpDeadlinePassed
+  );
   const textColor: string =
     eventStatus === ConferenceStatus.ENDED ? 'text-gray-400' : 'text-white';
 
@@ -180,7 +183,7 @@ export default async function VenuePage({
           <div className="w-[1130px] lg:w-full">
             <AgendaComponent city={city} />
           </div>
-        ) : cfpUrl ? (
+        ) : shouldShowCfpGuidelines && cfpUrl ? (
           <div className="w-[1090px] lg:w-full">
             <Guidelines
               talkDeadLine={city.cfpDate}
@@ -190,7 +193,11 @@ export default async function VenuePage({
               cfpDeadlinePassed={cfpDeadlinePassed}
             />
           </div>
-        ) : null}
+        ) : (
+          <div className="w-[1130px] lg:w-full">
+            <AgendaComponent city={city} />
+          </div>
+        )}
       </div>
       <div id="recordings" className="flex justify-center">
         {eventStatus === ConferenceStatus.ENDED ? (
