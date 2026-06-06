@@ -1,0 +1,1209 @@
+[
+  {
+    "time": "08:00 - 09:30 Europe/Amsterdam",
+    "session": "Centralized regional workforce",
+    "speaker": 1,
+    "type": "Workshop",
+    "city": "Italy",
+    "day": "Thursday, November 5, 2026"
+  },
+  {
+    "time": "08:00 - 08:30 Europe/Amsterdam",
+    "session": "Function-based systematic toolset",
+    "speaker": 2,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Thursday, November 5, 2026"
+  },
+  {
+    "time": "08:30 - 09:00 Europe/Amsterdam",
+    "session": "Right-sized tangible support",
+    "speaker": 3,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Thursday, November 5, 2026"
+  },
+  {
+    "time": "09:00 - 09:30 Europe/Amsterdam",
+    "session": "Phased local Internet solution",
+    "speaker": [
+      4,
+      5
+    ],
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Thursday, November 5, 2026"
+  },
+  {
+    "time": "10:30 - 12:00 Europe/Amsterdam",
+    "session": "Profit-focused user-facing contingency",
+    "speaker": 6,
+    "type": "Workshop",
+    "city": "Italy",
+    "day": "Thursday, November 5, 2026"
+  },
+  {
+    "time": "10:30 - 11:00 Europe/Amsterdam",
+    "session": "Inverse discrete knowledge user",
+    "speaker": [
+      7,
+      8
+    ],
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Thursday, November 5, 2026"
+  },
+  {
+    "time": "11:00 - 11:30 Europe/Amsterdam",
+    "session": "Mandatory modular hub",
+    "speaker": 9,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Thursday, November 5, 2026"
+  },
+  {
+    "time": "11:30 - 12:00 Europe/Amsterdam",
+    "session": "Inverse scalable benchmark",
+    "speaker": 10,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Thursday, November 5, 2026"
+  },
+  {
+    "time": "13:00 - 13:30 Europe/Amsterdam",
+    "session": "Universal logistical adapter",
+    "speaker": [
+      11,
+      12
+    ],
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Thursday, November 5, 2026"
+  },
+  {
+    "time": "13:00 - 14:30 Europe/Amsterdam",
+    "session": "Secured bottom-line hierarchy",
+    "speaker": 13,
+    "type": "Workshop",
+    "city": "Italy",
+    "day": "Thursday, November 5, 2026"
+  },
+  {
+    "time": "13:30 - 14:00 Europe/Amsterdam",
+    "session": "Devolved bi-directional emulation",
+    "speaker": 14,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Thursday, November 5, 2026"
+  },
+  {
+    "time": "14:00 - 14:30 Europe/Amsterdam",
+    "session": "User-friendly asynchronous forecast",
+    "speaker": 15,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Thursday, November 5, 2026"
+  },
+  {
+    "time": "08:00 - 09:30 Europe/Amsterdam",
+    "session": "Open-architected impactful website",
+    "speaker": 16,
+    "type": "Workshop",
+    "city": "Italy",
+    "day": "Friday, November 6, 2026"
+  },
+  {
+    "time": "08:00 - 08:30 Europe/Amsterdam",
+    "session": "Synchronized client-driven structure",
+    "speaker": 17,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Friday, November 6, 2026"
+  },
+  {
+    "time": "08:30 - 09:00 Europe/Amsterdam",
+    "session": "Reduced web-enabled data-warehouse",
+    "speaker": 18,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Friday, November 6, 2026"
+  },
+  {
+    "time": "09:00 - 09:30 Europe/Amsterdam",
+    "session": "User-centric zero administration support",
+    "speaker": 19,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Friday, November 6, 2026"
+  },
+  {
+    "time": "10:30 - 12:00 Europe/Amsterdam",
+    "session": "Progressive grid-enabled attitude",
+    "speaker": 20,
+    "type": "Workshop",
+    "city": "Italy",
+    "day": "Friday, November 6, 2026"
+  },
+  {
+    "time": "10:30 - 11:00 Europe/Amsterdam",
+    "session": "Open-source upward-trending portal",
+    "speaker": 21,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Friday, November 6, 2026"
+  },
+  {
+    "time": "11:00 - 11:30 Europe/Amsterdam",
+    "session": "Profit-focused 5thgeneration firmware",
+    "speaker": 22,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Friday, November 6, 2026"
+  },
+  {
+    "time": "11:30 - 12:00 Europe/Amsterdam",
+    "session": "Reverse-engineered exuding data-warehouse",
+    "speaker": 23,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Friday, November 6, 2026"
+  },
+  {
+    "time": "13:00 - 14:30 Europe/Amsterdam",
+    "session": "Balanced directional methodology",
+    "speaker": 24,
+    "type": "Workshop",
+    "city": "Italy",
+    "day": "Friday, November 6, 2026"
+  },
+  {
+    "time": "13:00 - 13:30 Europe/Amsterdam",
+    "session": "Pre-emptive optimal Local Area Network",
+    "speaker": 25,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Friday, November 6, 2026"
+  },
+  {
+    "time": "13:30 - 14:00 Europe/Amsterdam",
+    "session": "Organized dynamic complexity",
+    "speaker": 23,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Friday, November 6, 2026"
+  },
+  {
+    "time": "14:00 - 14:30 Europe/Amsterdam",
+    "session": "Reverse-engineered scalable encryption",
+    "speaker": 26,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Friday, November 6, 2026"
+  },
+  {
+    "time": "08:00 - 09:30 Europe/Amsterdam",
+    "session": "Secured impactful monitoring",
+    "speaker": [
+      27,
+      28
+    ],
+    "type": "Workshop",
+    "city": "Italy",
+    "day": "Saturday, November 7, 2026"
+  },
+  {
+    "time": "08:00 - 08:30 Europe/Amsterdam",
+    "session": "Business-focused human-resource neural-net",
+    "speaker": 29,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Saturday, November 7, 2026"
+  },
+  {
+    "time": "08:30 - 09:00 Europe/Amsterdam",
+    "session": "Assimilated bandwidth-monitored archive",
+    "speaker": 30,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Saturday, November 7, 2026"
+  },
+  {
+    "time": "09:00 - 09:30 Europe/Amsterdam",
+    "session": "Robust multi-state concept",
+    "speaker": 7,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Saturday, November 7, 2026"
+  },
+  {
+    "time": "10:30 - 11:00 Europe/Amsterdam",
+    "session": "Innovative optimizing support",
+    "speaker": 14,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Saturday, November 7, 2026"
+  },
+  {
+    "time": "10:30 - 12:00 Europe/Amsterdam",
+    "session": "Configurable 24/7 core",
+    "speaker": 31,
+    "type": "Workshop",
+    "city": "Italy",
+    "day": "Saturday, November 7, 2026"
+  },
+  {
+    "time": "11:00 - 11:30 Europe/Amsterdam",
+    "session": "Horizontal dynamic monitoring",
+    "speaker": 32,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Saturday, November 7, 2026"
+  },
+  {
+    "time": "11:30 - 12:00 Europe/Amsterdam",
+    "session": "Extended intermediate challenge",
+    "speaker": 33,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Saturday, November 7, 2026"
+  },
+  {
+    "time": "13:00 - 14:30 Europe/Amsterdam",
+    "session": "Centralized hybrid leverage",
+    "speaker": 34,
+    "type": "Workshop",
+    "city": "Italy",
+    "day": "Saturday, November 7, 2026"
+  },
+  {
+    "time": "13:00 - 13:30 Europe/Amsterdam",
+    "session": "Front-line optimal approach",
+    "speaker": 35,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Saturday, November 7, 2026"
+  },
+  {
+    "time": "13:30 - 14:00 Europe/Amsterdam",
+    "session": "Profound national challenge",
+    "speaker": 11,
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Saturday, November 7, 2026"
+  },
+  {
+    "time": "14:00 - 14:30 Europe/Amsterdam",
+    "session": "Seamless zero tolerance orchestration",
+    "speaker": [
+      36,
+      37
+    ],
+    "type": "Talk",
+    "city": "Italy",
+    "day": "Saturday, November 7, 2026"
+  },
+  {
+    "time": "07:00 - 07:30 UTC",
+    "session": "Enhanced radical conglomeration",
+    "speaker": 38,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Wednesday, October 28, 2026"
+  },
+  {
+    "time": "07:00 - 08:30 UTC",
+    "session": "Cross-group solution-oriented groupware",
+    "speaker": 39,
+    "type": "Workshop",
+    "city": "Online",
+    "day": "Wednesday, October 28, 2026"
+  },
+  {
+    "time": "07:30 - 08:00 UTC",
+    "session": "User-friendly 6thgeneration synergy",
+    "speaker": 40,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Wednesday, October 28, 2026"
+  },
+  {
+    "time": "08:00 - 08:30 UTC",
+    "session": "Grass-roots global migration",
+    "speaker": 41,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Wednesday, October 28, 2026"
+  },
+  {
+    "time": "09:30 - 11:00 UTC",
+    "session": "Object-based object-oriented contingency",
+    "speaker": 42,
+    "type": "Workshop",
+    "city": "Online",
+    "day": "Wednesday, October 28, 2026"
+  },
+  {
+    "time": "09:30 - 10:00 UTC",
+    "session": "Synchronized systemic functionalities",
+    "speaker": 43,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Wednesday, October 28, 2026"
+  },
+  {
+    "time": "10:00 - 10:30 UTC",
+    "session": "Enterprise-wide context-sensitive time-frame",
+    "speaker": 44,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Wednesday, October 28, 2026"
+  },
+  {
+    "time": "10:30 - 11:00 UTC",
+    "session": "Versatile cohesive circuit",
+    "speaker": 45,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Wednesday, October 28, 2026"
+  },
+  {
+    "time": "12:00 - 13:30 UTC",
+    "session": "Stand-alone secondary collaboration",
+    "speaker": 46,
+    "type": "Workshop",
+    "city": "Online",
+    "day": "Wednesday, October 28, 2026"
+  },
+  {
+    "time": "12:00 - 12:30 UTC",
+    "session": "Enterprise-wide optimizing complexity",
+    "speaker": 47,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Wednesday, October 28, 2026"
+  },
+  {
+    "time": "12:30 - 13:00 UTC",
+    "session": "Function-based executive extranet",
+    "speaker": 48,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Wednesday, October 28, 2026"
+  },
+  {
+    "time": "13:00 - 13:30 UTC",
+    "session": "Function-based maximized methodology",
+    "speaker": 49,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Wednesday, October 28, 2026"
+  },
+  {
+    "time": "07:00 - 07:30 UTC",
+    "session": "Upgradable interactive instruction set",
+    "speaker": [
+      50,
+      51
+    ],
+    "type": "Talk",
+    "city": "Online",
+    "day": "Thursday, October 29, 2026"
+  },
+  {
+    "time": "07:00 - 08:30 UTC",
+    "session": "Integrated well-modulated definition",
+    "speaker": [
+      40,
+      52
+    ],
+    "type": "Workshop",
+    "city": "Online",
+    "day": "Thursday, October 29, 2026"
+  },
+  {
+    "time": "07:30 - 08:00 UTC",
+    "session": "Reduced full-range functionalities",
+    "speaker": [
+      40,
+      53
+    ],
+    "type": "Talk",
+    "city": "Online",
+    "day": "Thursday, October 29, 2026"
+  },
+  {
+    "time": "08:00 - 08:30 UTC",
+    "session": "Polarized 6thgeneration emulation",
+    "speaker": 54,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Thursday, October 29, 2026"
+  },
+  {
+    "time": "09:30 - 10:00 UTC",
+    "session": "Self-enabling impactful Internet solution",
+    "speaker": 55,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Thursday, October 29, 2026"
+  },
+  {
+    "time": "09:30 - 11:00 UTC",
+    "session": "Team-oriented exuding projection",
+    "speaker": 56,
+    "type": "Workshop",
+    "city": "Online",
+    "day": "Thursday, October 29, 2026"
+  },
+  {
+    "time": "10:00 - 10:30 UTC",
+    "session": "Monitored transitional application",
+    "speaker": 57,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Thursday, October 29, 2026"
+  },
+  {
+    "time": "10:30 - 11:00 UTC",
+    "session": "Exclusive full-range model",
+    "speaker": 58,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Thursday, October 29, 2026"
+  },
+  {
+    "time": "12:00 - 12:30 UTC",
+    "session": "Automated regional moderator",
+    "speaker": 47,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Thursday, October 29, 2026"
+  },
+  {
+    "time": "12:00 - 13:30 UTC",
+    "session": "Synergistic bottom-line application",
+    "speaker": 59,
+    "type": "Workshop",
+    "city": "Online",
+    "day": "Thursday, October 29, 2026"
+  },
+  {
+    "time": "12:30 - 13:00 UTC",
+    "session": "Robust 24/7 standardization",
+    "speaker": 50,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Thursday, October 29, 2026"
+  },
+  {
+    "time": "13:00 - 13:30 UTC",
+    "session": "Ergonomic optimizing hardware",
+    "speaker": 60,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Thursday, October 29, 2026"
+  },
+  {
+    "time": "07:00 - 07:30 UTC",
+    "session": "Team-oriented multi-state customer loyalty",
+    "speaker": 61,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Friday, October 30, 2026"
+  },
+  {
+    "time": "07:00 - 08:30 UTC",
+    "session": "Reverse-engineered dedicated infrastructure",
+    "speaker": 62,
+    "type": "Workshop",
+    "city": "Online",
+    "day": "Friday, October 30, 2026"
+  },
+  {
+    "time": "07:30 - 08:00 UTC",
+    "session": "Mandatory optimizing archive",
+    "speaker": [
+      63,
+      64
+    ],
+    "type": "Talk",
+    "city": "Online",
+    "day": "Friday, October 30, 2026"
+  },
+  {
+    "time": "08:00 - 08:30 UTC",
+    "session": "De-engineered demand-driven encoding",
+    "speaker": 65,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Friday, October 30, 2026"
+  },
+  {
+    "time": "09:30 - 11:00 UTC",
+    "session": "Robust multi-tasking archive",
+    "speaker": 66,
+    "type": "Workshop",
+    "city": "Online",
+    "day": "Friday, October 30, 2026"
+  },
+  {
+    "time": "09:30 - 10:00 UTC",
+    "session": "Proactive fresh-thinking installation",
+    "speaker": 67,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Friday, October 30, 2026"
+  },
+  {
+    "time": "10:00 - 10:30 UTC",
+    "session": "Proactive bi-directional superstructure",
+    "speaker": 68,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Friday, October 30, 2026"
+  },
+  {
+    "time": "10:30 - 11:00 UTC",
+    "session": "Assimilated analyzing protocol",
+    "speaker": 69,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Friday, October 30, 2026"
+  },
+  {
+    "time": "12:00 - 13:30 UTC",
+    "session": "Reduced multimedia archive",
+    "speaker": 70,
+    "type": "Workshop",
+    "city": "Online",
+    "day": "Friday, October 30, 2026"
+  },
+  {
+    "time": "12:00 - 12:30 UTC",
+    "session": "Upgradable systemic moderator",
+    "speaker": 71,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Friday, October 30, 2026"
+  },
+  {
+    "time": "12:30 - 13:00 UTC",
+    "session": "Expanded zero-defect application",
+    "speaker": 72,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Friday, October 30, 2026"
+  },
+  {
+    "time": "13:00 - 13:30 UTC",
+    "session": "Ergonomic actuating productivity",
+    "speaker": 73,
+    "type": "Talk",
+    "city": "Online",
+    "day": "Friday, October 30, 2026"
+  },
+  {
+    "time": "12:00 - 12:30 Asia/Kolkata",
+    "session": "Test proposal",
+    "speaker": 74,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "12:30 - 14:00 Asia/Kolkata",
+    "session": "Sharable dynamic alliance",
+    "speaker": 75,
+    "type": "Workshop",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "12:30 - 13:00 Asia/Kolkata",
+    "session": "Cross-group needs-based conglomeration",
+    "speaker": 76,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "13:00 - 13:30 Asia/Kolkata",
+    "session": "User-centric 5thgeneration synergy",
+    "speaker": 77,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "13:30 - 14:00 Asia/Kolkata",
+    "session": "Exclusive tertiary protocol",
+    "speaker": 78,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "15:00 - 16:30 Asia/Kolkata",
+    "session": "Visionary next generation architecture",
+    "speaker": 79,
+    "type": "Workshop",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "15:00 - 15:30 Asia/Kolkata",
+    "session": "Reduced solution-oriented emulation",
+    "speaker": 80,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "15:30 - 16:00 Asia/Kolkata",
+    "session": "Progressive impactful circuit",
+    "speaker": 81,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "16:00 - 16:30 Asia/Kolkata",
+    "session": "Integrated cohesive structure",
+    "speaker": 82,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "17:30 - 19:00 Asia/Kolkata",
+    "session": "Sharable neutral definition",
+    "speaker": [
+      83,
+      84
+    ],
+    "type": "Workshop",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "17:30 - 18:00 Asia/Kolkata",
+    "session": "Public-key client-server migration",
+    "speaker": 85,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "18:00 - 18:30 Asia/Kolkata",
+    "session": "Devolved 24hour productivity",
+    "speaker": 86,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "18:30 - 19:00 Asia/Kolkata",
+    "session": "Fundamental empowering frame",
+    "speaker": 83,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Saturday, August 22, 2026"
+  },
+  {
+    "time": "12:30 - 13:00 Asia/Kolkata",
+    "session": "Upgradable cohesive Internet solution",
+    "speaker": 87,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Sunday, August 23, 2026"
+  },
+  {
+    "time": "12:30 - 14:00 Asia/Kolkata",
+    "session": "Decentralized bi-directional budgetary management",
+    "speaker": 88,
+    "type": "Workshop",
+    "city": "Bengaluru",
+    "day": "Sunday, August 23, 2026"
+  },
+  {
+    "time": "13:00 - 13:30 Asia/Kolkata",
+    "session": "Networked asymmetric architecture",
+    "speaker": 89,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Sunday, August 23, 2026"
+  },
+  {
+    "time": "13:30 - 14:00 Asia/Kolkata",
+    "session": "Virtual 6thgeneration intranet",
+    "speaker": 90,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Sunday, August 23, 2026"
+  },
+  {
+    "time": "15:00 - 16:30 Asia/Kolkata",
+    "session": "Self-enabling local utilization",
+    "speaker": 91,
+    "type": "Workshop",
+    "city": "Bengaluru",
+    "day": "Sunday, August 23, 2026"
+  },
+  {
+    "time": "15:00 - 15:30 Asia/Kolkata",
+    "session": "Managed local functionalities",
+    "speaker": 92,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Sunday, August 23, 2026"
+  },
+  {
+    "time": "15:30 - 16:00 Asia/Kolkata",
+    "session": "Seamless 5thgeneration customer loyalty",
+    "speaker": 93,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Sunday, August 23, 2026"
+  },
+  {
+    "time": "16:00 - 16:30 Asia/Kolkata",
+    "session": "Face-to-face tangible support",
+    "speaker": 94,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Sunday, August 23, 2026"
+  },
+  {
+    "time": "17:30 - 18:00 Asia/Kolkata",
+    "session": "Reduced analyzing synergy",
+    "speaker": 81,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Sunday, August 23, 2026"
+  },
+  {
+    "time": "17:30 - 19:00 Asia/Kolkata",
+    "session": "Multi-lateral bandwidth-monitored superstructure",
+    "speaker": 95,
+    "type": "Workshop",
+    "city": "Bengaluru",
+    "day": "Sunday, August 23, 2026"
+  },
+  {
+    "time": "18:00 - 18:30 Asia/Kolkata",
+    "session": "Visionary content-based software",
+    "speaker": 96,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Sunday, August 23, 2026"
+  },
+  {
+    "time": "18:30 - 19:00 Asia/Kolkata",
+    "session": "Adaptive high-level toolset",
+    "speaker": 97,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Sunday, August 23, 2026"
+  },
+  {
+    "time": "12:30 - 14:00 Asia/Kolkata",
+    "session": "Synergized mission-critical help-desk",
+    "speaker": 91,
+    "type": "Workshop",
+    "city": "Bengaluru",
+    "day": "Monday, August 24, 2026"
+  },
+  {
+    "time": "12:30 - 13:00 Asia/Kolkata",
+    "session": "Multi-channeled multimedia project",
+    "speaker": 98,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Monday, August 24, 2026"
+  },
+  {
+    "time": "13:00 - 13:30 Asia/Kolkata",
+    "session": "Customer-focused needs-based capacity",
+    "speaker": 99,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Monday, August 24, 2026"
+  },
+  {
+    "time": "13:30 - 14:00 Asia/Kolkata",
+    "session": "Grass-roots actuating flexibility",
+    "speaker": 100,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Monday, August 24, 2026"
+  },
+  {
+    "time": "15:00 - 15:30 Asia/Kolkata",
+    "session": "Universal leadingedge system engine",
+    "speaker": 101,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Monday, August 24, 2026"
+  },
+  {
+    "time": "15:00 - 16:30 Asia/Kolkata",
+    "session": "Team-oriented interactive instruction set",
+    "speaker": 102,
+    "type": "Workshop",
+    "city": "Bengaluru",
+    "day": "Monday, August 24, 2026"
+  },
+  {
+    "time": "15:30 - 16:00 Asia/Kolkata",
+    "session": "Customizable explicit customer loyalty",
+    "speaker": 103,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Monday, August 24, 2026"
+  },
+  {
+    "time": "16:00 - 16:30 Asia/Kolkata",
+    "session": "Sharable zero-defect product",
+    "speaker": 104,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Monday, August 24, 2026"
+  },
+  {
+    "time": "17:30 - 19:00 Asia/Kolkata",
+    "session": "Enhanced leadingedge attitude",
+    "speaker": 95,
+    "type": "Workshop",
+    "city": "Bengaluru",
+    "day": "Monday, August 24, 2026"
+  },
+  {
+    "time": "17:30 - 18:00 Asia/Kolkata",
+    "session": "Triple-buffered maximized groupware",
+    "speaker": 105,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Monday, August 24, 2026"
+  },
+  {
+    "time": "18:00 - 18:30 Asia/Kolkata",
+    "session": "Profound global adapter",
+    "speaker": [
+      92,
+      106
+    ],
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Monday, August 24, 2026"
+  },
+  {
+    "time": "18:30 - 19:00 Asia/Kolkata",
+    "session": "Compatible tertiary superstructure",
+    "speaker": 107,
+    "type": "Talk",
+    "city": "Bengaluru",
+    "day": "Monday, August 24, 2026"
+  },
+  {
+    "time": "09:30 - 10:00 UTC",
+    "session": "Test Proposal",
+    "speaker": 108,
+    "type": "Talk",
+    "city": "New York",
+    "day": "Thursday, June 18, 2026"
+  },
+  {
+    "time": "09:00 - 10:30 Europe/Berlin",
+    "session": "Intuitive demand-driven focus group",
+    "speaker": [
+      109,
+      110
+    ],
+    "type": "Workshop",
+    "city": "Demo",
+    "day": "Tuesday, June 2, 2026"
+  },
+  {
+    "time": "09:00 - 09:30 Europe/Berlin",
+    "session": "Vision-oriented client-driven complexity",
+    "speaker": 111,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Tuesday, June 2, 2026"
+  },
+  {
+    "time": "09:30 - 10:00 Europe/Berlin",
+    "session": "Business-focused web-enabled Graphic Interface",
+    "speaker": 112,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Tuesday, June 2, 2026"
+  },
+  {
+    "time": "10:00 - 10:30 Europe/Berlin",
+    "session": "Virtual human-resource protocol",
+    "speaker": 113,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Tuesday, June 2, 2026"
+  },
+  {
+    "time": "11:30 - 13:00 Europe/Berlin",
+    "session": "Ergonomic value-added synergy",
+    "speaker": 114,
+    "type": "Workshop",
+    "city": "Demo",
+    "day": "Tuesday, June 2, 2026"
+  },
+  {
+    "time": "11:30 - 12:00 Europe/Berlin",
+    "session": "Multi-channeled didactic capacity",
+    "speaker": 115,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Tuesday, June 2, 2026"
+  },
+  {
+    "time": "12:00 - 12:30 Europe/Berlin",
+    "session": "Assimilated asynchronous extranet",
+    "speaker": 116,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Tuesday, June 2, 2026"
+  },
+  {
+    "time": "12:30 - 13:00 Europe/Berlin",
+    "session": "Re-engineered even-keeled workforce",
+    "speaker": 117,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Tuesday, June 2, 2026"
+  },
+  {
+    "time": "14:00 - 14:30 Europe/Berlin",
+    "session": "Public-key optimal migration",
+    "speaker": 118,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Tuesday, June 2, 2026"
+  },
+  {
+    "time": "14:00 - 15:30 Europe/Berlin",
+    "session": "Fundamental exuding installation",
+    "speaker": 119,
+    "type": "Workshop",
+    "city": "Demo",
+    "day": "Tuesday, June 2, 2026"
+  },
+  {
+    "time": "14:30 - 15:00 Europe/Berlin",
+    "session": "Grass-roots uniform database",
+    "speaker": 120,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Tuesday, June 2, 2026"
+  },
+  {
+    "time": "15:00 - 15:30 Europe/Berlin",
+    "session": "Reduced optimizing benchmark",
+    "speaker": 121,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Tuesday, June 2, 2026"
+  },
+  {
+    "time": "09:00 - 10:30 Europe/Berlin",
+    "session": "Polarized human-resource model",
+    "speaker": 122,
+    "type": "Workshop",
+    "city": "Demo",
+    "day": "Wednesday, June 3, 2026"
+  },
+  {
+    "time": "09:00 - 09:30 Europe/Berlin",
+    "session": "Ergonomic modular flexibility",
+    "speaker": 123,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Wednesday, June 3, 2026"
+  },
+  {
+    "time": "09:30 - 10:00 Europe/Berlin",
+    "session": "Proactive modular circuit",
+    "speaker": 117,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Wednesday, June 3, 2026"
+  },
+  {
+    "time": "10:00 - 10:30 Europe/Berlin",
+    "session": "Upgradable multi-state ability",
+    "speaker": 124,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Wednesday, June 3, 2026"
+  },
+  {
+    "time": "11:30 - 13:00 Europe/Berlin",
+    "session": "Decentralized attitude-oriented moderator",
+    "speaker": 123,
+    "type": "Workshop",
+    "city": "Demo",
+    "day": "Wednesday, June 3, 2026"
+  },
+  {
+    "time": "11:30 - 12:00 Europe/Berlin",
+    "session": "User-friendly multi-state superstructure",
+    "speaker": 117,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Wednesday, June 3, 2026"
+  },
+  {
+    "time": "12:00 - 12:30 Europe/Berlin",
+    "session": "Synchronized holistic hub",
+    "speaker": 125,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Wednesday, June 3, 2026"
+  },
+  {
+    "time": "12:30 - 13:00 Europe/Berlin",
+    "session": "Monitored 24hour protocol",
+    "speaker": 126,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Wednesday, June 3, 2026"
+  },
+  {
+    "time": "14:00 - 14:30 Europe/Berlin",
+    "session": "Centralized clear-thinking model",
+    "speaker": 127,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Wednesday, June 3, 2026"
+  },
+  {
+    "time": "14:00 - 15:30 Europe/Berlin",
+    "session": "Compatible optimal utilization",
+    "speaker": 126,
+    "type": "Workshop",
+    "city": "Demo",
+    "day": "Wednesday, June 3, 2026"
+  },
+  {
+    "time": "14:30 - 15:00 Europe/Berlin",
+    "session": "Advanced discrete migration",
+    "speaker": 128,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Wednesday, June 3, 2026"
+  },
+  {
+    "time": "15:00 - 15:30 Europe/Berlin",
+    "session": "Streamlined homogeneous archive",
+    "speaker": 129,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Wednesday, June 3, 2026"
+  },
+  {
+    "time": "09:00 - 10:30 Europe/Berlin",
+    "session": "Integrated real-time throughput",
+    "speaker": 130,
+    "type": "Workshop",
+    "city": "Demo",
+    "day": "Thursday, June 4, 2026"
+  },
+  {
+    "time": "09:00 - 09:30 Europe/Berlin",
+    "session": "Progressive didactic strategy",
+    "speaker": 131,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Thursday, June 4, 2026"
+  },
+  {
+    "time": "09:30 - 10:00 Europe/Berlin",
+    "session": "Enterprise-wide intangible neural-net",
+    "speaker": 132,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Thursday, June 4, 2026"
+  },
+  {
+    "time": "10:00 - 10:30 Europe/Berlin",
+    "session": "Organized dynamic hub",
+    "speaker": 133,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Thursday, June 4, 2026"
+  },
+  {
+    "time": "11:30 - 12:00 Europe/Berlin",
+    "session": "Multi-layered reciprocal conglomeration",
+    "speaker": 134,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Thursday, June 4, 2026"
+  },
+  {
+    "time": "11:30 - 13:00 Europe/Berlin",
+    "session": "Cross-group 6thgeneration infrastructure",
+    "speaker": 113,
+    "type": "Workshop",
+    "city": "Demo",
+    "day": "Thursday, June 4, 2026"
+  },
+  {
+    "time": "12:00 - 12:30 Europe/Berlin",
+    "session": "Multi-channeled homogeneous open architecture",
+    "speaker": 135,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Thursday, June 4, 2026"
+  },
+  {
+    "time": "12:30 - 13:00 Europe/Berlin",
+    "session": "Realigned bi-directional Graphical User Interface",
+    "speaker": 136,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Thursday, June 4, 2026"
+  },
+  {
+    "time": "14:00 - 14:30 Europe/Berlin",
+    "session": "Seamless client-driven product",
+    "speaker": [
+      137,
+      138
+    ],
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Thursday, June 4, 2026"
+  },
+  {
+    "time": "14:00 - 15:30 Europe/Berlin",
+    "session": "Re-engineered explicit hierarchy",
+    "speaker": 139,
+    "type": "Workshop",
+    "city": "Demo",
+    "day": "Thursday, June 4, 2026"
+  },
+  {
+    "time": "14:30 - 15:00 Europe/Berlin",
+    "session": "Networked disintermediate standardization",
+    "speaker": 140,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Thursday, June 4, 2026"
+  },
+  {
+    "time": "15:00 - 15:30 Europe/Berlin",
+    "session": "Cloned exuding contingency",
+    "speaker": 127,
+    "type": "Talk",
+    "city": "Demo",
+    "day": "Thursday, June 4, 2026"
+  }
+]
