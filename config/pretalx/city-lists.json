@@ -5,9 +5,9 @@
     "date": "5 - 6 November, 2026",
     "cfpDate": "3 April, 2026",
     "description": "Join us for AsyncAPI Conf Europe 2026. CFP and schedule data are managed in Pretalx.",
-    "img": "https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg",
+    "img": "https://conference.asyncapi.com/img/locations/paris.webp",
     "address": "Test",
-    "mapUrl": "http://localhost:8346/asyncapi-europe-2026/",
+    "mapUrl": "https://maps.google.com/",
     "sponsors": {
       "eventSponsors": []
     },
@@ -21,13 +21,13 @@
   },
   {
     "name": "Online",
-    "country": " Edition",
+    "country": "Edition",
     "date": "28 October, 2026",
     "cfpDate": "3 April, 2026",
     "description": "Join us for AsyncAPI Conf Online 2026. CFP and schedule data are managed in Pretalx.",
-    "img": "/img/locations/teasers.webp",
-    "address": "Pretalx event page",
-    "mapUrl": "http://localhost:8346/asyncapi-online-2026/",
+    "img": "https://conference.asyncapi.com/img/CFS-Banner.png",
+    "address": "AsyncAPI YouTube Channel",
+    "mapUrl": "https://www.youtube.com/@AsyncAPI",
     "sponsors": {
       "eventSponsors": []
     },
@@ -43,9 +43,9 @@
     "name": "Bengaluru",
     "country": "India",
     "date": "22 - 23 August, 2026",
-    "cfpDate": "9 June, 2026",
+    "cfpDate": "30 June, 2026",
     "description": "Join us for AsyncAPI Conf India 2026. CFP and schedule data are managed in Pretalx.",
-    "img": "/img/locations/teasers.webp",
+    "img": "https://conference.asyncapi.com/img/locations/bangalore.webp",
     "address": "TBA",
     "mapUrl": "https://maps.google.com/",
     "sponsors": {
@@ -63,11 +63,11 @@
     "name": "New York",
     "country": "USA",
     "date": "17 - 20 June, 2026",
-    "cfpDate": "10 June, 2026",
-    "description": "Join us for AsyncAPI US Conf. CFP and schedule data are managed in Pretalx.",
-    "img": "/img/locations/teasers.webp",
-    "address": "New york city",
-    "mapUrl": "https://maps.google.com",
+    "cfpDate": "1 July, 2026",
+    "description": "Join us for AsyncAPI US Conf 2026. CFP and schedule data are managed in Pretalx.",
+    "img": "https://conference.asyncapi.com/img/locations/san-jose.webp",
+    "address": "New York City",
+    "mapUrl": "https://maps.google.com/",
     "sponsors": {
       "eventSponsors": []
     },
@@ -75,26 +75,6 @@
     "cfp": {
       "provider": "pretalx",
       "eventSlug": "asyncapi-us-conf-2026"
-    },
-    "recordings": null,
-    "playlist": null
-  },
-  {
-    "name": "Demo",
-    "country": "TBA",
-    "date": "2 - 4 June, 2026",
-    "cfpDate": "2 April, 2026",
-    "description": "Join us for DemoConf. CFP and schedule data are managed in Pretalx.",
-    "img": "/img/locations/teasers.webp",
-    "address": "Pretalx event page",
-    "mapUrl": "http://localhost:8346/democonf/",
-    "sponsors": {
-      "eventSponsors": []
-    },
-    "freeEntry": true,
-    "cfp": {
-      "provider": "pretalx",
-      "eventSlug": "democonf"
     },
     "recordings": null,
     "playlist": null
