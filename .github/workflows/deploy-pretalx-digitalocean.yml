@@ -85,6 +85,22 @@ jobs:
           printf '%s\n' "$DO_SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
 
+      - name: Prepare remote directory
+        env:
+          DO_SSH_HOST: ${{ secrets.DO_SSH_HOST }}
+          DO_SSH_USER: ${{ secrets.DO_SSH_USER }}
+          DO_SSH_PORT: ${{ vars.DO_SSH_PORT || '22' }}
+          PRETALX_REMOTE_PATH: ${{ vars.PRETALX_REMOTE_PATH || '/opt/asyncapi-pretalx' }}
+        run: |
+          ssh -p "$DO_SSH_PORT" -o StrictHostKeyChecking=accept-new "$DO_SSH_USER@$DO_SSH_HOST" "
+            set -e
+            if [ \"\$(id -u)\" = '0' ]; then
+              install -d -o '$DO_SSH_USER' -g '$DO_SSH_USER' '$PRETALX_REMOTE_PATH' '$PRETALX_REMOTE_PATH/conf' '$PRETALX_REMOTE_PATH/plugins'
+            else
+              mkdir -p '$PRETALX_REMOTE_PATH/conf' '$PRETALX_REMOTE_PATH/plugins'
+            fi
+          "
+
       - name: Upload deployment files
         env:
           DO_SSH_HOST: ${{ secrets.DO_SSH_HOST }}
