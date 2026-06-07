@@ -149,8 +149,9 @@ jobs:
         env:
           PRETALX_SITE_URL: ${{ github.event.inputs.pretalx_site_url || vars.PRETALX_SITE_URL || 'https://cfp.asyncapi.com' }}
         run: |
-          curl --fail --retry 8 --retry-delay 10 "$PRETALX_SITE_URL/healthcheck" || exit 1
-          status_code=$(curl -o /dev/null -s -w "%{http_code}" "$PRETALX_SITE_URL/healthcheck")
+          healthcheck_url="${PRETALX_SITE_URL%/}/healthcheck"
+          curl --fail --location --retry 8 --retry-delay 10 --retry-all-errors "$healthcheck_url"
+          status_code=$(curl --location -o /dev/null -s -w "%{http_code}" "$healthcheck_url")
           if [ "$status_code" -ne 200 ]; then
             echo "Health check failed with status code $status_code"
             exit 1
